@@ -1,4 +1,7 @@
-function NextButtin({ dispatch, answer, index, numQuestions }) {
+import { useQuiz } from "../context/QuizContextProcider";
+
+function NextButtin() {
+  const { dispatch, answer, index, numQuestions } = useQuiz();
   if (answer === null) return null;
   if (index < numQuestions - 1)
     return (
